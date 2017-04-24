@@ -1,0 +1,181 @@
+
+/* 购物指南部分 */
+#tmall-desc {
+    background-image: url('TB1.png');
+    background-repeat: no-repeat;
+}
+
+#tmall-desc::after, #tmall-desc::before {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+#tmall-desc dl a, .w1 #mallPage.mallist #site-nav .sn-mobile, .w1 #mallPage.mallist #site-nav .sn-seller, .w1190 #site-nav .sn-mobile, .w1190 #site-nav .sn-sitemap, .w1230 #site-nav .sn-sitemap, div.w1190 #site-nav .sn-seller {
+    display: block;
+}
+#tmall-desc::after {
+    clear: both;
+}
+
+#tmall-desc dl {
+    float: left;
+    padding-left: 50px;
+    width: 186px;
+}
+#tmall-desc dl dt {
+    color: #646464;
+    font-size: 16px;
+    font-weight: 700;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+}
+#tmall-desc dl dd {
+    text-align: left;
+}
+
+#tmall-desc dl a {
+    color: #8b8b8b;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    text-align: left;
+    width: 100px;
+}
+#tmall-desc #mobile a {
+    height: 105px;
+    line-height: 105px;
+    text-align: center;
+    width: 105px;
+}
+#footer p strong {
+    font-weight: 400;
+}
+#footer p a {
+    color: #fff;
+    margin-right: 3px;
+}
+#tmall-copyright {
+    background: #000 none repeat scroll 0 0;
+    border-top: 2px solid #c40000;
+    min-height: 177px;
+    text-align: left;
+}
+
+#footer, #site-nav {
+    font-family: "Microsoft YaHei",tahoma,arial,"Hiragino Sans GB","宋体",sans-serif;
+}
+
+.main-nav a, .main-nav s {
+    letter-spacing: normal;
+    vertical-align: top;
+}
+
+
+#footer .server-num, #server-num {
+    background: #000 none repeat scroll 0 0;
+    color: #000;
+    font-size: 11px;
+}
+/*
+	media 属性规定 被链接文档 将显示在 什么设备上
+	media 属性用于 为不同的媒介类型 规定不同样式
+*/
+@media (max-width: 1210px) {
+#tmall-ensure {
+    background-image: url(" ");
+    width: 1000px;
+	background-color:#3F0;
+}
+#tmall-ensure a {
+    width: 247px;
+}
+#tmall-desc {
+    /* background-position: 12px bottom; */
+	/* bottom（背景图片靠对象紧贴底部开始显示） */
+    width: 990px;
+}
+#tmall-desc dl {
+    padding-left: 15px;
+    width: 200px;
+}
+#tmall-desc #mobile {
+    width: 110px;
+}
+#tmall-copyright .footer-copyright, #tmall-copyright .footer-otherlink, #tmall-copyright .footer-tmallinfo {
+    width: 990px;
+}
+}
+/* 尾页链接图片 */
+.fo_set{
+	width:1190px;
+	margin-left:auto;
+	margin-right:auto;
+	/*
+		定义和用法
+			white-space 属性设置如何处理元素内的空白。
+			这个属性 声明 建立布局过程中 如何处理元素中的 空白符。
+		规定段落中的文本不进行换行：
+			p{
+				white-space: nowrap
+			}		
+	*/
+	white-space: nowrap;
+
+}
+
+#tmall-copyright .footer-otherlink, #tmall-copyright .footer-tmallinfo {
+    color: #fff;
+    line-height: 25px;
+}
+#tmall-copyright .footer-copyright, #tmall-copyright .footer-otherlink, #tmall-copyright .footer-tmallinfo {
+    margin: 0 auto;
+    width: 1000px;
+}
+#tmall-copyright .footer-copyright {
+    background: #000 none repeat scroll 0 0;
+    color: #a4a4a4;
+    line-height: 20px;
+}
+
+/* 尾部整体布局 */
+#fo_web {
+	
+	
+	/*
+	position:absolute;
+	top:3900px;
+	*/
+	display:none;
+	margin-top:20px;
+	
+	overflow:hidden;
+    border-top: 1px solid #d1d7dc;
+    text-align: center;
+    width: 100%;
+	
+	/*
+	position:absolute;left:0;bottom:0;
+	*/
+}
+
+#tmall-ensure {
+    background: rgba(0, 0, 0, 0) url("../img/footer/seller/T1Z.jpg") no-repeat scroll 0 0;
+    height: 100px;
+    margin: 25px auto;
+    padding: 0;
+    width: 1190px;
+}
+
+/*
+定义
+text-indent 属性规定文本块中首行文本的缩进。
+*/
+#tmall-ensure a {
+    display: block;
+    float: left;
+    height: 100px;
+    text-indent: -1000em;
+    width: 297px;
+}
+

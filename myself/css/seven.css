@@ -1,0 +1,38 @@
+
+.seven
+{
+    margin: 0 auto;
+    width: 1190px;
+	margin-top:10px;
+}
+.o_hi{
+    overflow: hidden;
+    
+}
+
+.p_re{
+	position: relative;
+}
+.seven_pic {
+    margin-left: -10px;
+    width: 1210px;
+	
+}
+.seven_pa {
+    display: inline;
+    float: left;
+    margin: 0 0 10px 10px;
+    overflow: hidden;
+}
+a {
+    color: #666;
+    text-decoration: none;
+}
+a img{
+	border:0;
+}
+.today_look_r a{
+	display:block;
+	width:250;
+	float:left;
+}

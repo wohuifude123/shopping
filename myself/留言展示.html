@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>留言板</title>
+<script type="text/javascript" src="js/public20170330.js"></script>
+
+
+
+<style>
+/*#left{*/
+/*width: 25%;*/
+/*float: left;*/
+/*}*/
+/*#center{*/
+/*width: 42%;*/
+/*float: left;*/
+/*}*/
+/*#right{*/
+/*width: 32%;*/
+/*float: left;*/
+/*}*/
+.right{
+margin-left: 140px;
+}
+.button{
+background-color: rgba(230, 228, 236, 0.93); /* Green */
+border: none;
+color: #110c0f;
+padding: 10px 70px;
+text-align: center;
+display: inline-block;
+font-size: 16px;
+margin-left: 20px;
+cursor: pointer;
+}
+form{
+font-size: 17px;
+}
+button{
+background-color: rgba(249, 247, 255, 0);
+border: none;
+font-size: 16px;
+color: #551a8b;
+cursor: pointer;
+}
+a{
+text-decoration:none;
+}
+table{
+width: 360px;
+height: 100px;
+}
+
+
+
+</style>
+<script>
+
+
+function foo()
+{
+/*
+if(myform.name.value=="")
+{
+	alert("请输入你的姓名");
+	myform.name.focus();
+	return false;
+}
+if (myform.content.value=="")
+{
+	alert("留言内容不能为空");
+	myform.content.focus();
+	return false;
+}
+if(myform.vcode.value==""){
+	alert('验证码不能为空');
+	myform.vcode.focus();
+	return false;
+}
+*/
+}
+
+</script>
+
+
+</head>
+<body>
+
+<div id="left">
+	<img src="1477727203382106.jpg" width="370px">
+</div>
+
+<div id="center">
+	<h1>愿望树</h1>
+	<p>
+	</p>
+　　
+	<table cellspacing="0" border="1">
+	<tbody><tr>
+	<td>姓名：小龙</td><td style="text-align: center">留言时间:2016-11-02</td>
+
+	<td><a href="ressage_delete.php?id=14">删除</a> </td>
+	</tr>
+
+	<tr>
+	<td colspan="3">你的留言:小龙的身体特别棒</td>
+	</tr>
+
+	</tbody>
+	</table>
+　　
+	<table cellspacing="0" border="1">
+	<tbody><tr>
+	<td>姓名：小明</td><td style="text-align: center">留言时间:2016-11-02</td>
+
+	<td><a href="ressage_delete.php?id=13">删除</a> </td>
+	</tr>
+
+	<tr>
+	<td colspan="3">你的留言:小明的学习怎么样？</td>
+	</tr>
+
+	</tbody>
+	</table>
+　　
+	<table cellspacing="0" border="1">
+	<tbody><tr>
+	<td>姓名：刘奇</td><td style="text-align: center">留言时间:2016-11-02</td>
+
+	<td><a href="ressage_delete.php?id=12">删除</a> </td>
+	</tr>
+
+	<tr>
+	<td colspan="3">你的留言:今天你那里天气怎么样</td>
+	</tr>
+
+	</tbody>
+	</table>
+
+	<div id="baner" style="margin-top: 20px">
+	<a href="/ressage.php?page=1">首页</a>
+	  <a href="/ressage.php?page=0">上一页</a>
+	<!-- 显示123456等页码按钮-->
+	<a style="padding: 5px 5px;background: #000;color: #FFF" href="/ressage.php?page=1">1</a>   <a href="/ressage.php?page=2">下一页</a>
+	  <a href="/ressage.php?page=1">末页</a>
+	  <span>共3条</span>
+
+	</div>
+</div>
+
+
+<div id="right">
+	<h2>留言板</h2>
+
+	<div> <a href="">首页</a> | <button>留言</button> <a href="" class="right">管理员登录</a>
+	
+	<div class="form">
+	<p>
+	姓名：<input name="name" type="text">
+	</p>
+	<p>
+	邮箱：<input name="email" type="email">
+	</p>
+	<p>
+	留言内容：<br>
+	<textarea cols="30" rows="7" name="content" id="content"></textarea>
+	</p>
+	<p>
+	验证码：<input name="vcode" type="text"><img src="yanzhengma.php" onclick="this.src='yanzhengma.php?nocache='+Math.random()" style="cursor:hand">
+	</p>
+	<p>
+	<button class="button" id="leave">提交留言</button>
+	</p>
+	</div>
+	
+	</div>
+
+
+
+</div>
+
+<div id="cs">测试已经开始</div>
+
+<script type="text/javascript">
+
+
+//提交表单功能
+var leave_button = document.getElementById("leave");
+var content = document.getElementById("content");
+leave_button.onclick = function()
+{
+	var str001 = {"name": "apple", "sex": "21"};
+	//alert(str001['name']);
+	createJson(str001,"content", content.value);
+	createJson(str001,"date", getNowFormatDate());
+	
+	//alert(str001['content']);
+	//document.getElementById("message").submit();
+	
+	//获取留言信息
+	$_a.ajax_L({
+		url:'php/leave_message.php',              //查询是否登录
+		type: "POST",                       //请求方式
+		data: str001,        //请求参数
+		dataType: "json",
+		success: function (response, xml) {
+			// 此处放成功后执行的代码
+			//alert(response);
+			if(response=="uninitialized"){//没有获得数据
+				alert("un=="+response);
+			}
+			else
+			{
+				document.getElementById("cs").innerHTML = response;
+			}
+		},
+		fail: function (status) {
+			// 此处放失败后执行的代码
+		}
+	});
+}
+
+//获取当前时间
+function getNowFormatDate() {
+    var date = new Date();
+    var seperator1 = "-";
+    var seperator2 = ":";
+    var month = date.getMonth() + 1;
+    var strDate = date.getDate();
+    if (month >= 1 && month <= 9) {
+        month = "0" + month;
+    }
+    if (strDate >= 0 && strDate <= 9) {
+        strDate = "0" + strDate;
+    }
+    var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+            + " " + date.getHours() + seperator2 + date.getMinutes()
+            + seperator2 + date.getSeconds();
+    return currentdate;
+}
+
+
+</script>
+
+
+
+
+
+
+
+</body>

@@ -1,0 +1,190 @@
+*{  
+    margin:0px;  
+    padding:0px;  
+}  
+#entirety{
+	/* 整体框架 */
+	width:100%;
+	/* background-color:#0F0; */
+	margin:0 auto;
+	display:block;
+	position:relative;
+
+}
+#show{
+	margin:0 auto;
+	position:relative;
+	width:1190px;
+	/*background-color:#00C;*/
+	height:450px;
+	
+}
+#topside{
+	/* 搜索框架 */
+	margin:0 auto;
+	position:relative;
+	width:1190px;
+	/* background-color:#00C; */
+	height:130px;
+	overflow:hidden;
+}
+#navigation{/*首页导航*/
+	width:1190px;
+	/*background-color:#06F;*/
+	margin:0 auto;
+	position:relative;
+	height:50px;
+
+}
+#navigation ul{
+	list-style:none;
+	/*width:900px;*/
+	/*margin:0 auto;*/
+	position:relative;
+	/*height:30px;*/
+
+}
+#navigation ul li{
+	/*
+	float:left;
+	width:100px;
+	background-color:#606;
+	text-align:center;
+	line-height:30px;
+	height:30px;
+	*/
+	/*
+	定义和用法
+	line-height 属性设置行间的距离（行高）。
+	*/
+	
+}
+
+#recommend{/*商品推荐*/
+	width:1190px;
+	
+	margin:0 auto;
+}
+.recommend_img{
+	float:left;
+}
+
+.show1{
+	/* float:left; */
+}
+#product{
+	width:1190px;
+	/*background-color:#F36;*/
+	margin:0 auto;
+	margin:0 auto;
+	position:relative;
+	height:590px;
+	margin-top:30px;
+}
+.product1_1{
+	float:left;
+}
+#product2{
+	
+	position:relative;
+	
+	width:1190px;
+	/*padding-top:210px;*/
+	background-color:#0F0;
+	margin-top: 10px;
+	/*
+	margin和padding是在html中的盒模型的基础上出现
+	margin是盒子的外边距，即盒子与盒子之间的距离
+	padding是盒子的内边距，是盒子的边与盒子内部元素的距离
+
+	*/
+}
+#floor2{
+	width:1190px;
+	/* background-color:#60F; */
+	margin:0 auto;
+	margin:0 auto;
+	position:relative;
+	height:355px;
+	
+}
+
+.product2_1,.floor2_1,.floor3_1,.information_1{
+	float:left;
+}
+
+
+#economy,#serve{
+	width:1190px;
+	background-color:#F36;
+	margin:0 auto;
+	height:80px;
+	margin-top:30px;
+	overflow:hidden;
+}
+
+#information{
+	width:1190px;
+	/* background-color:#0F9; */
+	margin:0 auto;
+	height:200px;
+	margin-top:10px;
+}
+#serve{
+
+}
+/* 火爆推荐 */
+#hotbrand{
+	margin-left:auto;
+	margin-right:auto;
+	width:1190px;
+	margin-top:20px;
+}
+/* 购物街 */
+.enjoy_street{
+	margin-left:auto;
+	margin-right:auto;
+	width:1000px;
+}
+/* 购物特色 */
+.feature_fo
+{
+	width:1190px;
+	
+	line-height:50px;
+	font-size:30px;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/* 控制页面链接 */
+/* 
+a:link {color: #FF0000}     /未访问的链接/
+a:visited {color: #00FF00}  /已访问的链接/
+a:hover {color: #FF00FF}    /当有鼠标悬停在链接上/
+a:active {color: #0000FF}   /被选择的链接/
+*/
+a{
+	cursor:pointer
+}
+a:link
+{
+	/*color:#37a;*/
+	text-decoration:none
+}
+a:visited{
+	color:#669;
+	text-decoration:none
+}
+/* 鼠标经过样式 */
+a:hover{
+	/*color:#fff;*/
+	text-decoration:none;
+	/*background:#37a*/
+}
+a:active{
+	color:#fff;
+	text-decoration:none;
+	background:#f93
+}

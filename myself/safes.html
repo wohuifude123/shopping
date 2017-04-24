@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+<script type="text/javascript" src="js/public20170423.js"></script>
+
+<style>
+
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, span, a, b, img, em, del, label, form, fieldset, input, p, th, td {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #34323d;
+}
+
+#top {
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #e5e5e5;
+    color: #888;
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+}
+
+#header {
+    background-color: #fff;
+    height: 78px;
+    padding-top: 25px;
+}
+
+
+#box_zp {
+    overflow: hidden;
+    width: 100%;
+}
+
+.bg0, .bg1, .bg2, .bg3, .bg4, .bg5 {
+	background: rgba(0, 0, 0, 0) url("http://s.dddua.com/themes/v4/css/zp/bg0.png") no-repeat scroll 50% 0;
+    font-family: "Microsoft Yahei";
+    width: 100%;
+}
+
+.bg0 {
+    height: 526px;
+}
+
+.bg1 {
+    background-image: url("http://s.dddua.com/themes/v4/css/zp/bg1.png");
+	
+	position:relative;
+	height:600px;
+}
+
+.bg2 {
+    background-image: url("http://s.dddua.com/themes/v4/css/zp/bg2.png");
+    background-position: 50% bottom;
+    height: 964px;
+	
+ 
+	
+}
+.bg3 {
+    background-color: #d11b31;
+    background-image: url("http://s.dddua.com/themes/v4/css/zp/bg3.png");
+    background-position: 50% bottom;
+    height: 930px;
+	
+	position:relative;
+}
+.bg4 {
+    background-image: url("http://s.dddua.com/themes/v4/css/zp/bg4.png");
+    background-position: 50% bottom;
+    height: 700px;
+	
+	position:relative;
+}
+.bg5 {
+    background-color: #d11b31;
+    background-image: url("http://s.dddua.com/themes/v4/css/zp/bg5.png");
+    background-position: 50% bottom;
+    height: 740px;
+	
+	position:relative;
+}
+
+.bg5 {
+    background-color: #d11b31;
+    background-image: url("http://s.dddua.com/themes/v4/css/zp/bg5.png");
+    background-position: 50% bottom;
+    height: 740px;
+	
+	position:relative;
+}
+
+.bg6 {
+    height: 600px;
+	
+	position:relative;
+}
+
+.content{
+	position:relative;
+	display:block;
+
+	width:800px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.content1{
+	width:800px;
+	height:500px;
+	
+	position: absolute;
+	/*
+		只要父级元素设了position并且不是static（默认既是static），那么设定了absolute的子元素即以此为包含块（最近的）
+	*/
+	top:50%;
+	left:50%;
+	margin-top:-250px;/*负图片height的一半*/
+	margin-left:-400px;/*负图片width的一半*/
+	
+	display:none;
+
+　　　
+
+}
+</style>
+
+
+</head>
+
+<body>
+
+<div id="top">
+
+</div>
+
+<div id="header">
+
+</div>
+
+<div id="box_zp">
+    <div id="f1" class="bg0">
+    	<div class="content">
+        	<img src="img/safes/q1.jpg" width="800" height="526" />
+        </div>
+    </div>
+    <div id="f2" class="bg1 animate section">
+    	<div class="content1" >
+    		<img src="img/safes/q2.jpg" width="800" height="500" />
+        </div>
+    </div>
+     
+    <div id="f3" class="bg3 section">
+    	<div class="content1" ></div>
+    </div>
+    <div id="f4" class="bg4 section">
+    	<div class="content1">
+    	<img src="img/safes/q4.jpg" width="800" height="500" />
+        </div>
+    </div>
+    <div id="f5" class="bg5 section">
+    	<div class="content1">
+    	<img src="img/safes/q5.jpg" width="800" height="500" />
+        </div>
+    </div>
+    <div id="f6" class="bg6 section">
+    	<div class="content1">
+    	<img src="img/safes/q1.jpg" width="800" height="500" />
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+
+var section =  getElementsClassBlank("section");
+var content1 =  getElementsClass("content1");
+
+var str001 = {"name": "apple", "sex": "21"};
+$_a.ajax_L({
+		url:'php/safepicture.php',              //查询是否登录
+		type: "POST",                       //请求方式
+		data: str001,        //请求参数
+		dataType: "json",
+		success: function (response, xml) {
+			// 此处放成功后执行的代码
+			//alert(response);
+			if(response=="uninitialized"){//没有获得数据
+				alert("un=="+response);
+			}
+			else
+			{
+				//alert("结果=="+response);
+				var jsonstr = eval('(' + response + ')');
+				for(var i in jsonstr)
+				{
+					var img = document.createElement("img");
+					//alert(jsonstr[i]);
+					//alert(key+"=="+jsonstr[i][key]);
+					for(var key in jsonstr[i])
+					{
+						
+						switch(key)
+						{
+							case "name":
+								//alert("名字=="+jsonstr[i][key]);
+								//img.setAttribute("id", "newImg");
+						  	break;
+							case "path":
+								//alert("路径=="+jsonstr[i][key]);
+								img.src = jsonstr[i][key];
+							break;
+							case "width":
+								//alert("宽度=="+jsonstr[i][key]);
+								img[key] = jsonstr[i][key];
+							break;
+							case "height":
+								//alert("高度=="+jsonstr[i][key]);
+								img[key] = jsonstr[i][key];
+						  	break;
+							default:
+						  
+						}
+					}
+					switch(jsonstr[i]['name'])
+					{
+						case "q3":
+							content1[1].appendChild(img);
+						break;
+						default:
+					}
+					
+				}
+				
+			}
+		},
+		fail: function (status) {
+			// 此处放失败后执行的代码
+		}
+	});
+	
+	
+
+//提交表单功能
+
+/*
+leave_button.onclick = function()
+{
+	//document.getElementById("message").submit();
+}
+*/
+
+
+//alert(section.length);
+
+//offsetTop:获取对象相对于版面或由 offsetTop 属性指定的父坐标的计算顶端位置
+//alert(section[0].offsetTop);
+//在声明DOCTYPE的浏览器中，获取浏览器显示窗口的大小
+//alert(document.documentElement.clientHeight);
+
+
+if(section[0].offsetTop<=document.documentElement.clientHeight)
+{
+	content1[0].style.display = "block";
+}
+
+
+addEvent(window,'scroll',function(){
+	//alert(section[1].offsetTop);
+	var Mic = MicCase;
+	//alert(Mic.getScrollTop());
+	//alert(Mic.getClientHeight());
+	if (Mic.getScrollTop() + Mic.getClientHeight() >= section[1].offsetTop)
+	{
+		content1[1].style.display = "block";
+	}
+	if (Mic.getScrollTop() + Mic.getClientHeight() >= section[2].offsetTop)
+	{
+		content1[2].style.display = "block";
+	}
+	
+	if (Mic.getScrollTop() + Mic.getClientHeight() >= section[3].offsetTop)
+	{
+		content1[3].style.display = "block";
+	}
+	if (Mic.getScrollTop() + Mic.getClientHeight() >= section[4].offsetTop)
+	{
+		content1[4].style.display = "block";
+	}
+
+});
+
+</script>
+
+</body>
+</html>

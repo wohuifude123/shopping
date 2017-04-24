@@ -1,0 +1,14 @@
+/* 左右广告样式 */
+#adleft,#adright{
+	width:30px;
+	height:100px;
+	padding:20px;
+	font:14px/20px arial;
+	text-align:center;
+	background:#06c;
+	position:absolute;
+	cursor:pointer;
+	color:#fff
+}
+#adleft{left:0; top:150px; }
+#adright{right:0; top:150px;}

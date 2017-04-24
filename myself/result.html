@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="js/public2.js"></script>
+</head>
+
+<body>
+
+<div id="img01"></div>
+
+<script type="text/javascript">
+
+alert("开始");
+
+var data1 ={ name: "super", age: 20 };
+
+$_a.ajax_L({
+	
+        url:'php/ajax.php',              //请求地址
+        type: "POST",                       //请求方式
+        data: data1,        //请求参数
+        dataType: "json",
+		success: function (response, xml) {
+            // 此处放成功后执行的代码
+			var ab = response;
+			var aa =  eval('(' + response + ')');
+			document.getElementById("img01").innerHTML=ab;
+			for(var key in aa)
+			{
+				for(var key_1 in aa[key])
+				{
+					alert(key_1+"=="+aa[key][key_1]);
+				}
+				
+			}
+			
+        },
+        fail: function (status) {
+            // 此处放失败后执行的代码
+        }
+    });
+	
+alert("测试结束");
+
+</script>
+
+</body>
+</html>

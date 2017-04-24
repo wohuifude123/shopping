@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+
+<div><img src2="img/f1.jpg" width="270" height="270" class="sbm"></div>
+<div><img src2="http://s.dddua.com/images/201606/thumb_img2/6537_thumb_P60_1464853737337.jpg" width="30" height="30" data-s="http://s.dddua.com/images/201606/source_img/6537_P_1464853706056.jpg"/></div>
+
+
+<script type="text/javascript">
+//var imgs = document.getElementsByTagName("img");
+//alert("src=="+imgs[0].src);
+//alert("src2=="+imgs[0].src2);
+//alert("get2=="+imgs[0].getAttribute("src2"));
+function imgsrc(){
+	var imgs = document.getElementsByTagName("img");
+	for(var i=0;i<imgs.length;i++)
+	{
+		if(imgs[i].src == "")
+		{
+			imgs[i].src=imgs[i].getAttribute("src2");
+		}
+	}
+	/*
+	if(imgs[0].src == "")
+	{
+		imgs[0].src=imgs[0].getAttribute("src2");
+	}
+	*/
+}imgsrc();
+
+</script>
+
+</body>
+</html>

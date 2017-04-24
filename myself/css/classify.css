@@ -1,0 +1,201 @@
+
+
+.nall {
+    background-color: #c40000;
+    color: #fff;
+    font-size: 14px;
+    height: 34px;
+    line-height: 34px;
+    text-indent: 54px;
+    width: 200px;
+}
+.hand {
+	/* 一些不同光标 */
+    cursor: pointer;
+	height:50px;
+	line-height:50px;
+	font-size:18px;
+	float:left;
+	/*
+	定义
+		text-indent 属性规定文本块中首行文本的缩进。
+		注释：允许使用负值。如果使用负值，那么首行会被缩进到左边。
+	*/
+	text-indent:0px;
+	text-align:center;
+	
+}
+.lnav {
+    background-color: #d01e1e;
+    height: 450px;
+    left: 0;
+    padding-top: 0px;
+    position: absolute;
+    top: 0px;
+    width: 200px;
+}
+.lnav li {
+    border-left: 2px solid #d01e1e;
+    color: #fff;
+    float: left;
+    height: 40px;
+    width: 200px;
+	font-size:15px;
+	font-family: "Microsoft YaHei",SimSun,"宋体",sans-serif;
+	color: #fff;
+
+}
+.lma {
+    color: #fff;
+    display: inline-block;
+    line-height: 38px;
+    width: 135px;
+}
+.lma:hover {
+    text-decoration: none;
+}
+.lnav .f {
+    float: left;
+    font-size: 18px;
+    line-height: 38px;
+    margin: 0 15px 0 18px;
+    width: 18px;
+}
+/* 经过才能显示 */
+.lra {
+	/* -moz-是火狐浏览器的专有属性 */
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #fff;
+    border-color: #d01e1e #d01e1e #d01e1e -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    /*display: none;*/
+    height: 429px;
+    left: 200px;
+    padding: 10px;
+    position: absolute;
+    top: -1px;
+    width: 270px;
+    z-index: 2;
+	/*background-color:#0F0; */
+	visibility:hidden;/*用visibility来隐藏元素*/
+}
+
+.boa a {
+    background-color: #7c7171;
+    color: #fff;
+    display: inline;
+    float: left;
+    line-height: 25px;
+    margin: 10px;
+    text-align: center;
+    width: 114px;
+}
+
+
+
+
+.lh3 {
+    border-bottom: 1px solid #e5e5e5;
+    color: #333;
+    font-size: 14px;
+    line-height: 40px;
+    margin-left: 10px;
+    overflow: hidden;
+    text-align: right;
+    width: 248px;
+}
+.left {
+    float: left;
+	font-family: "Microsoft Yahei";
+}
+.bom a {
+    display: inline-block;
+    line-height: 30px;
+    padding: 5px 0 0 10px;
+}
+
+.bom a {
+	color: #666;
+	/*
+		定义和用法
+			text-decoration 属性规定添加到文本的修饰。
+			注释：修饰的颜色由 "color" 属性设置。
+	*/
+    text-decoration: none;
+}
+#nav,#lnav{
+	height:450px;
+	
+	
+}
+
+.lnav li a:nth-child(2) {
+	margin-left:12px
+}
+/* 图片轮播上面分类 */
+#classify{
+	float: left;
+	margin-left:0px;
+	padding-left:0px;
+
+	height:50px;
+	overflow:hidden;
+	
+	width:990px;!important
+}
+.navs li {
+    float: left;
+    font-size:18px;
+	/*
+		定义和用法
+			font-weight 属性设置文本的粗细。
+	*/
+    font-weight: 700;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+	width:110px;
+	text-align:center;
+	
+}
+
+.navs a {
+    color: #333;
+    display: block;
+    float: left;
+    padding: 0 auto;
+	width:100px;
+}
+
+.navs a:hover, .navs a.on {
+    color: #c40000;
+    text-decoration: none;
+}
+
+.navs a::before {
+    background-color: #fff;
+    bottom: 0;
+    content: "";
+    height: 0;
+    left: 20px;
+    position: absolute;
+    right: 20px;
+    transition: all 0.3s ease 0s;
+    width: auto;
+    z-index: 0;
+}
+.navs li:hover a::before {
+    background-color: #c40000;
+    height: 3px;
+}
+
+
+
+.clear {
+    clear: both;
+}
